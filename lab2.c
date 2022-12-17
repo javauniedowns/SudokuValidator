@@ -62,7 +62,7 @@ int** read_board_from_file(char* filename)
             arr[i][j] = atoi(&pointer3[count]);
             count = count + 2;
         }
-
+        /*
         sudoku_board[0] = arr[0];
         sudoku_board[1] = arr[1];
         sudoku_board[2] = arr[2];
@@ -72,6 +72,14 @@ int** read_board_from_file(char* filename)
         sudoku_board[6] = arr[6];
         sudoku_board[7] = arr[7];
         sudoku_board[8] = arr[8];
+        */
+        for(int i = 0; i<ROW_SIZE; i++)
+        {
+            for (int j = 0; j<COL_SIZE; j++)
+            {
+               sudoku_board[i][j] = arr[i][j];
+            }
+        }
     }
 
     return sudoku_board;
